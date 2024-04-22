@@ -24,7 +24,7 @@ public class KafkaConfig {
     private String bootstrapServers;
 
     @Bean public NewTopic SignupEvent() {
-        return new NewTopic("signup-event", 3, (short) 3);
+        return new NewTopic("signup-event", 3, (short) 2);
     }
 
     @Bean
