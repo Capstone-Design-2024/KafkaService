@@ -26,7 +26,9 @@ public class KafkaConfig {
     @Bean public NewTopic SignupEvent() {
         return new NewTopic("signup-event", 3, (short) 2);
     }
-
+    @Bean public NewTopic NFTRegistryEvent() {
+        return new NewTopic("nft-registry-event", 3, (short) 2);
+    }
     @Bean
     public ProducerFactory<String, String> producerFactory() {
         Map<String,Object> configs = new HashMap<>();
